@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Kratika Singh",
+      "phoneNo": "7364774356",
+      "email": "krati@gmail.com",
+      "companyName": "Abc Pvt Ltd",
+      "address": "hamirpur"
+    },
+    {
+      "fullName": "nmsandms",
+      "email": "xcxs@fg.vom",
+      "phoneNo": "+91 34658774367",
+      "companyName": "fdgsdfgdsfg",
+      "address": "fgdfdgdfsgfdfdgdsfgsdf",
+      "id": 24
+    },
+    {
+      "fullName": "nmsandms",
+      "email": "xcxs@fg.vom",
+      "phoneNo": "+91 34658774367",
+      "companyName": "fdgsdfgdsfg",
+      "address": "a",
+      "id": 25
+    }
+  ]
+}
