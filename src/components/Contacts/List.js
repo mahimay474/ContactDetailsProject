@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-=======
->>>>>>> new files
 import MailIcon from '@material-ui/icons/Mail';
 
 

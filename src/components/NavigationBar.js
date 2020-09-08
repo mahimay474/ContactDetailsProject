@@ -12,18 +12,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/ArrowDropDown';
 import MailIcon from '@material-ui/icons/Mail';
-<<<<<<< HEAD
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import MoreIcon from '@material-ui/icons/MoreVert';
-import { Link } from "react-router-dom";
-
-const useStyles = makeStyles((theme) => ({
-  grow: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-=======
 import ContactIcon from '@material-ui/icons/ContactPhone';
 import HomeIcon from '@material-ui/icons/Home';
 import NotificationsIcon from '@material-ui/icons/Notifications';
@@ -103,7 +91,6 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
->>>>>>> new files
   },
   search: {
     position: 'relative',
@@ -142,10 +129,7 @@ const useStyles = makeStyles((theme) => ({
       width: '20ch',
     },
   },
-<<<<<<< HEAD
-=======
   
->>>>>>> new files
   sectionDesktop: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
@@ -162,8 +146,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavigationBar() {
   const [users, setUser] = useState([]);
-<<<<<<< HEAD
-=======
   const theme = useTheme();
 
   const [open, setOpen] = React.useState(false);
@@ -175,7 +157,6 @@ export default function NavigationBar() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
->>>>>>> new files
 
   useEffect(() => {
     loadUsers();
@@ -223,13 +204,7 @@ export default function NavigationBar() {
       <MenuItem onClick={handleMenuClose}> <table >
           <thead >
             <tr>
-<<<<<<< HEAD
-              {/* <th scope="col">#</th> */}
               <th scope="col">Contacts</th>
-              {/* <th></th> */}
-=======
-              <th scope="col">Contacts</th>
->>>>>>> new files
             </tr>
           </thead>
           <tbody>
@@ -304,16 +279,6 @@ export default function NavigationBar() {
   );
 
   return (
-<<<<<<< HEAD
-    <div className={classes.grow}>
-      <AppBar position="static" color="primary">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-=======
     <div className={classes.root}>
       <AppBar  position="fixed"
         className={clsx(classes.appBar, {
@@ -329,7 +294,6 @@ export default function NavigationBar() {
             className={clsx(classes.menuButton, {
               [classes.hide]: open,
             })}
->>>>>>> new files
           >
             <MenuIcon />
           </IconButton>
@@ -346,25 +310,15 @@ export default function NavigationBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
-<<<<<<< HEAD
-          <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
-          <IconButton aria-label="show 4 new mails" color="inherit">
-=======
           <div className={classes.root} />
           <div className={classes.sectionDesktop}>
             
           <IconButton className="title" edge="end" aria-label="show 4 new mails" color="inherit">
->>>>>>> new files
               <Badge color="secondary">
                 +Add
               </Badge>
             </IconButton>
-<<<<<<< HEAD
-            <IconButton aria-label="show 4 new mails" color="inherit">
-=======
             <IconButton edge="end" aria-label="show 4 new mails" color="inherit">
->>>>>>> new files
               <Badge color="secondary">
                 <MailIcon />
               </Badge>
@@ -380,11 +334,7 @@ export default function NavigationBar() {
             >
               Name<AccountCircle />
             </IconButton>
-<<<<<<< HEAD
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-=======
             <IconButton edge="end" aria-label="show 17 new notifications" color="inherit">
->>>>>>> new files
               <Badge color="secondary">
                 <NotificationsIcon />
               </Badge>
@@ -397,18 +347,13 @@ export default function NavigationBar() {
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
               color="inherit"
-<<<<<<< HEAD
-=======
               edge="end"
->>>>>>> new files
             >
               <MoreIcon />
             </IconButton>
           </div>
         </Toolbar>
       </AppBar>
-<<<<<<< HEAD
-=======
       <Drawer
         variant="permanent"
         className={clsx(classes.drawer, {
@@ -449,7 +394,6 @@ export default function NavigationBar() {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         </main>
->>>>>>> new files
       {renderMobileMenu}
       {renderMenu}
     </div>

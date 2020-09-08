@@ -16,14 +16,8 @@ code {
   -webkit-box-shadow: 0 8px 6px -6px #999;
   -moz-box-shadow: 0 8px 6px -6px #999;
   box-shadow: 0 8px 6px -6px #999;
-<<<<<<< HEAD
-
-  /* the rest of your styling */
-}
-=======
   /* the rest of your styling */
 }
 .style-button{
   background: linear-gradient(75deg,rgba(255,142,83,1)40%, rgba(254,107,139,1)70% );
 }
->>>>>>> new files

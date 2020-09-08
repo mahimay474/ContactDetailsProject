@@ -27,10 +27,6 @@ const ContactList = () => {
         <table class="table border shadow">
           <thead class="thead-dark">
             <tr>
-<<<<<<< HEAD
-              {/* <th scope="col">#</th> */}
-=======
->>>>>>> new files
               <th scope="col">Basic Info</th>
               <th scope="col">Company</th>
               <th></th>
@@ -39,10 +35,6 @@ const ContactList = () => {
           <tbody>
             {users.map((user, index) => (
               <tr>
-<<<<<<< HEAD
-                {/* <th scope="row">{index + 1}</th> */}
-=======
->>>>>>> new files
                 <td>{user.fullName}</td>
                 <td>{user.companyName}</td>
                 <td>
