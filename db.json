@@ -17,11 +17,19 @@
       "id": 24
     },
     {
+<<<<<<< HEAD
       "fullName": "nmsandms",
       "email": "xcxs@fg.vom",
       "phoneNo": "+91 34658774367",
       "companyName": "fdgsdfgdsfg",
       "address": "a",
+=======
+      "fullName": "hari",
+      "email": "hai@gmail.com",
+      "phoneNo": "+91 4576878688",
+      "companyName": "jhjh",
+      "address": "Srinivasa Signature Apartment\nSarjapura road , Banglore",
+>>>>>>> new files
       "id": 25
     }
   ]

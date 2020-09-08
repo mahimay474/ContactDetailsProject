@@ -12,6 +12,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/ArrowDropDown';
 import MailIcon from '@material-ui/icons/Mail';
+<<<<<<< HEAD
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { Link } from "react-router-dom";
@@ -22,6 +23,87 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+=======
+import ContactIcon from '@material-ui/icons/ContactPhone';
+import HomeIcon from '@material-ui/icons/Home';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import MoreIcon from '@material-ui/icons/MoreVert';
+import { Link } from "react-router-dom";
+import clsx from 'clsx';
+import { useTheme } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import AboutIcon from '@material-ui/icons/ListAltRounded';
+
+
+
+const drawerWidth = 240;
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+  },
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  appBarShift: {
+    marginLeft: drawerWidth,
+    width: `calc(100% - ${drawerWidth}px)`,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  menuButton: {
+    marginRight: 36,
+  },
+  hide: {
+    display: 'none',
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+    whiteSpace: 'nowrap',
+  },
+  drawerOpen: {
+    width: drawerWidth,
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  drawerClose: {
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    overflowX: 'hidden',
+    width: theme.spacing(7) + 1,
+    [theme.breakpoints.up('sm')]: {
+      width: theme.spacing(9) + 1,
+    },
+  },
+  toolbar: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+>>>>>>> new files
   },
   search: {
     position: 'relative',
@@ -60,6 +142,10 @@ const useStyles = makeStyles((theme) => ({
       width: '20ch',
     },
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> new files
   sectionDesktop: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
@@ -76,6 +162,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavigationBar() {
   const [users, setUser] = useState([]);
+<<<<<<< HEAD
+=======
+  const theme = useTheme();
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+>>>>>>> new files
 
   useEffect(() => {
     loadUsers();
@@ -123,9 +223,13 @@ export default function NavigationBar() {
       <MenuItem onClick={handleMenuClose}> <table >
           <thead >
             <tr>
+<<<<<<< HEAD
               {/* <th scope="col">#</th> */}
               <th scope="col">Contacts</th>
               {/* <th></th> */}
+=======
+              <th scope="col">Contacts</th>
+>>>>>>> new files
             </tr>
           </thead>
           <tbody>
@@ -200,6 +304,7 @@ export default function NavigationBar() {
   );
 
   return (
+<<<<<<< HEAD
     <div className={classes.grow}>
       <AppBar position="static" color="primary">
         <Toolbar>
@@ -208,6 +313,23 @@ export default function NavigationBar() {
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+=======
+    <div className={classes.root}>
+      <AppBar  position="fixed"
+        className={clsx(classes.appBar, {
+          [classes.appBarShift]: open,
+        })}
+        >
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            className={clsx(classes.menuButton, {
+              [classes.hide]: open,
+            })}
+>>>>>>> new files
           >
             <MenuIcon />
           </IconButton>
@@ -224,14 +346,25 @@ export default function NavigationBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
+<<<<<<< HEAD
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
           <IconButton aria-label="show 4 new mails" color="inherit">
+=======
+          <div className={classes.root} />
+          <div className={classes.sectionDesktop}>
+            
+          <IconButton className="title" edge="end" aria-label="show 4 new mails" color="inherit">
+>>>>>>> new files
               <Badge color="secondary">
                 +Add
               </Badge>
             </IconButton>
+<<<<<<< HEAD
             <IconButton aria-label="show 4 new mails" color="inherit">
+=======
+            <IconButton edge="end" aria-label="show 4 new mails" color="inherit">
+>>>>>>> new files
               <Badge color="secondary">
                 <MailIcon />
               </Badge>
@@ -247,7 +380,11 @@ export default function NavigationBar() {
             >
               Name<AccountCircle />
             </IconButton>
+<<<<<<< HEAD
             <IconButton aria-label="show 17 new notifications" color="inherit">
+=======
+            <IconButton edge="end" aria-label="show 17 new notifications" color="inherit">
+>>>>>>> new files
               <Badge color="secondary">
                 <NotificationsIcon />
               </Badge>
@@ -260,12 +397,59 @@ export default function NavigationBar() {
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
               color="inherit"
+<<<<<<< HEAD
+=======
+              edge="end"
+>>>>>>> new files
             >
               <MoreIcon />
             </IconButton>
           </div>
         </Toolbar>
       </AppBar>
+<<<<<<< HEAD
+=======
+      <Drawer
+        variant="permanent"
+        className={clsx(classes.drawer, {
+          [classes.drawerOpen]: open,
+          [classes.drawerClose]: !open,
+        })}
+        classes={{
+          paper: clsx({
+            [classes.drawerOpen]: open,
+            [classes.drawerClose]: !open,
+          }),
+        }}
+      >
+        <div className={classes.toolbar}>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+          </IconButton>
+        </div>
+        <Divider />
+        <List>
+          <Link to="/">
+         <ListItem>
+           <ListItemIcon><HomeIcon /></ListItemIcon>
+         </ListItem>
+         </Link>
+         <Link to="/contact">
+         <ListItem>
+           <ListItemIcon><ContactIcon /></ListItemIcon>
+         </ListItem>
+         </Link>
+         <Link to="/about">
+         <ListItem>
+           <ListItemIcon><AboutIcon /></ListItemIcon>
+         </ListItem>
+         </Link>
+        </List>
+      </Drawer>
+      <main className={classes.content}>
+        <div className={classes.toolbar} />
+        </main>
+>>>>>>> new files
       {renderMobileMenu}
       {renderMenu}
     </div>

@@ -1,9 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
 import styled from 'styled-components';
 import Grid from '@material-ui/core/Grid';
 import AllContactList from './AllContactList';
 import Typography from '@material-ui/core/Typography';
 import { Toolbar } from '@material-ui/core';
+=======
+import AllContactList from './AllContactList';
+>>>>>>> new files
 import Button from '@material-ui/core/button'
 import { Form, FormControl } from 'react-bootstrap';
 import { makeStyles } from '@material-ui/core/styles';
@@ -13,6 +17,7 @@ import DropdownIcon from '@material-ui/icons/ArrowDropDownOutlined';
 import ContactsIcon from '@material-ui/icons/Contacts';
 
 
+<<<<<<< HEAD
 const Wrapper = styled.div`
   margin-top: 1em;
   margin-left: 6em;
@@ -22,6 +27,8 @@ const Wrapper = styled.div`
   }
  
 `;
+=======
+>>>>>>> new files
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -66,6 +73,7 @@ const Contacts = () => {
       setOpen(false);
   };
 return (
+<<<<<<< HEAD
  
 <React.Fragment>
 <Wrapper>
@@ -112,6 +120,45 @@ return (
     </Wrapper>
     </React.Fragment>
     
+=======
+ <>
+    <div className="View-details">
+      <section className="Form">
+        <div className="container">
+          <div className="row">
+            <div className="col-3 ml-5"><ContactsIcon />  Colors</div>
+            <div className="col-3 mx-5 ml-5">Sort by: Date Created<DropdownIcon /></div>
+              </div>
+              <div className="row my-3 p-1">
+                <div className="col-4 ml-5 ">
+                  <Form className="form-center">
+                    <FormControl type="text" placeholder="Search" className="" />
+                  </Form>
+                  </div>
+                  <div className="col-4 mx-5 ml-5">
+                    <Button className="style-button" onClick={handleOpen}>+ Add Contacts</Button>
+                    <Modal
+                      aria-labelledby="simple-modal-title"
+                      aria-describedby="simple-modal-description"
+                      open={open}
+                      onClose={handleClose}
+                    >
+                    <div style={modalStyle} className={classes.paper}>
+                      <AddContacts />
+                    </div>
+                  </Modal>
+                </div>
+              </div>
+            <div className="row">
+              <div className="col-10 px-5 ">
+                <AllContactList />
+              </div>
+          </div>
+        </div>
+      </section>
+    </div>
+   </> 
+>>>>>>> new files
 );
 }
 

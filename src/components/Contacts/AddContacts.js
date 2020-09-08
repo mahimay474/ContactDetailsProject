@@ -9,10 +9,14 @@ import axios from 'axios';
 
 
 const styles = () => ({
+<<<<<<< HEAD
   card: {
     maxWidth: 420,
     marginTop: 50
   },
+=======
+ 
+>>>>>>> new files
   container: {
     display: "Flex",
     justifyContent: "center"
@@ -28,7 +32,10 @@ const AddContacts = props => {
   // };
    const trueBool = true;
   const {
+<<<<<<< HEAD
     classes,
+=======
+>>>>>>> new files
     values,
     touched,
     errors,
@@ -40,9 +47,16 @@ const AddContacts = props => {
   } = props;
 
   return (
+<<<<<<< HEAD
     <div className={classes.container}>
       <form onSubmit={handleSubmit}>
             <h1>Add Contacts </h1>
+=======
+    <div className="container">
+        <div className="w-55 mx-auto p-5">
+        <h2 className="text-center mb-4">Add Contacts</h2>
+      <form onSubmit={handleSubmit}>
+>>>>>>> new files
             <label>Full name</label>
             <TextField
               id="fullName"
@@ -125,6 +139,10 @@ const AddContacts = props => {
             </Button>
       </form>
     </div>
+<<<<<<< HEAD
+=======
+    </div>
+>>>>>>> new files
   );
 };
 
